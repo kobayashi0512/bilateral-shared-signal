@@ -1,0 +1,16 @@
+{
+  "native_editable": [
+    "all titles, labels, panels, comparison cards, dividers, arrows, callouts"
+  ],
+  "raster_assets": [
+    "L1.jpg",
+    "L2.jpg",
+    "R1.jpg",
+    "R2.jpg",
+    "right_eye_example.jpg",
+    "left_eye_example.jpg"
+  ],
+  "generated_assets": [],
+  "source_figure_region_reuse": false,
+  "connector_endpoint_audit": "passed: six saved DrawingML triangle arrowheads and rendered-preview inspection"
+}

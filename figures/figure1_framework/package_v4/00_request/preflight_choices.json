@@ -1,0 +1,18 @@
+{
+  "mode": "image-to-editable with explicit redesign permission",
+  "purpose": "SCI manuscript submission",
+  "figure_type": "multi-panel workflow/framework",
+  "tone_palette": "Minimal Journal; teal/blue/amber colorblind-aware",
+  "target_standard": "generic two-column SCI, journal unspecified",
+  "editability": "native SVG/PPTX text, shapes and connectors; original fundus images are raster",
+  "output_root": "figures/figure1_framework/package_v4",
+  "figure_slug": "figure1_framework",
+  "language": "English",
+  "canvas_mm": [
+    180,
+    148
+  ],
+  "source_figure": "figures/figure1_framework/assets/previous_framework_reference.png",
+  "redesign_authorized": "User requested increased use of original dataset images; preserve the existing framework layout and add an illustrative PAPILA pair to the PAPILA evidence card.",
+  "avoid": "unearned biomarker claims, synthetic clinical images, patient-level labels, unlicensed CFP–OCT photographs"
+}

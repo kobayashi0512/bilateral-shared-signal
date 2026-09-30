@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this research package, please cite the accompanying manuscript and the original dataset papers."
+title: "Conditional Bilateral Fundus Correspondence Under Disease and Quality Matching"
+type: software
+authors:
+  - family-names: Deng
+    given-names: Kaiwen
+  - family-names: Liu
+    given-names: Liwei
+version: 1.0.0
+date-released: 2026-09-30
+url: "https://github.com/kobayashi0512/bilateral-shared-signal"

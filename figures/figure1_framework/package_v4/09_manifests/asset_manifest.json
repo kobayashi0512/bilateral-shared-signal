@@ -1,0 +1,54 @@
+{
+  "generated_assets": [],
+  "trusted_source_images": [
+    {
+      "id": "L1",
+      "source_path": "figures/figure1_framework/assets/deepdrid/L1.jpg",
+      "package_path": "figures/figure1_framework/package_v4/01_inputs/source_images/L1.jpg",
+      "editability_type": "raster photograph",
+      "source_license": "CC BY-SA 4.0",
+      "changes": "resized for display only"
+    },
+    {
+      "id": "L2",
+      "source_path": "figures/figure1_framework/assets/deepdrid/L2.jpg",
+      "package_path": "figures/figure1_framework/package_v4/01_inputs/source_images/L2.jpg",
+      "editability_type": "raster photograph",
+      "source_license": "CC BY-SA 4.0",
+      "changes": "resized for display only"
+    },
+    {
+      "id": "R1",
+      "source_path": "figures/figure1_framework/assets/deepdrid/R1.jpg",
+      "package_path": "figures/figure1_framework/package_v4/01_inputs/source_images/R1.jpg",
+      "editability_type": "raster photograph",
+      "source_license": "CC BY-SA 4.0",
+      "changes": "resized for display only"
+    },
+    {
+      "id": "R2",
+      "source_path": "figures/figure1_framework/assets/deepdrid/R2.jpg",
+      "package_path": "figures/figure1_framework/package_v4/01_inputs/source_images/R2.jpg",
+      "editability_type": "raster photograph",
+      "source_license": "CC BY-SA 4.0",
+      "changes": "resized for display only"
+    },
+    {
+      "id": "PAPILA_OD",
+      "source_path": "figures/figure1_framework/assets/papila/right_eye_example.jpg",
+      "package_path": "figures/figure1_framework/package_v4/01_inputs/source_images/right_eye_example.jpg",
+      "editability_type": "raster photograph",
+      "source_license": "GPL-3.0+",
+      "changes": "resized for display only"
+    },
+    {
+      "id": "PAPILA_OS",
+      "source_path": "figures/figure1_framework/assets/papila/left_eye_example.jpg",
+      "package_path": "figures/figure1_framework/package_v4/01_inputs/source_images/left_eye_example.jpg",
+      "editability_type": "raster photograph",
+      "source_license": "GPL-3.0+",
+      "changes": "resized for display only"
+    }
+  ],
+  "source_figure_regions_reused": false
+}

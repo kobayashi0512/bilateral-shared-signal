@@ -1,0 +1,105 @@
+{
+  "canvas": {
+    "width_mm": 180,
+    "height_mm": 148,
+    "aspect_ratio": 1.2162162162162162
+  },
+  "reference": "figures/figure1_framework/assets/previous_framework_reference.png",
+  "approved_deviation": "Existing framework geometry and panel order are preserved; two original PAPILA eye photographs are added to the PAPILA evidence card at the user's request.",
+  "panels": [
+    "A patient unit and four views",
+    "B comparison definitions",
+    "C frozen scoring",
+    "D conditional controls",
+    "E evidence roles"
+  ],
+  "textZones": [
+    "title and subtitle",
+    "A-E panel titles and descriptions",
+    "interpretation boundary"
+  ],
+  "fineRegions": [
+    {
+      "id": "image_L1",
+      "role": "original illustrative fundus image",
+      "implementation": "trusted_source_image",
+      "source": "L1.jpg"
+    },
+    {
+      "id": "image_L2",
+      "role": "original illustrative fundus image",
+      "implementation": "trusted_source_image",
+      "source": "L2.jpg"
+    },
+    {
+      "id": "image_R1",
+      "role": "original illustrative fundus image",
+      "implementation": "trusted_source_image",
+      "source": "R1.jpg"
+    },
+    {
+      "id": "image_R2",
+      "role": "original illustrative fundus image",
+      "implementation": "trusted_source_image",
+      "source": "R2.jpg"
+    },
+    {
+      "id": "papila_od",
+      "role": "original illustrative PAPILA eye photograph",
+      "implementation": "trusted_source_image",
+      "source": "right_eye_example.jpg"
+    },
+    {
+      "id": "papila_os",
+      "role": "original illustrative PAPILA eye photograph",
+      "implementation": "trusted_source_image",
+      "source": "left_eye_example.jpg"
+    }
+  ],
+  "routeSegments": [
+    {
+      "id": "input_to_pairs",
+      "implementation": "native_vector",
+      "arrow_direction_status": "from source to destination",
+      "native_connector_endpoint_policy": "tailEnd triangle in DrawingML"
+    },
+    {
+      "id": "pairs_to_scoring",
+      "implementation": "native_vector",
+      "arrow_direction_status": "from source to destination",
+      "native_connector_endpoint_policy": "tailEnd triangle in DrawingML"
+    },
+    {
+      "id": "encoder_to_cosine",
+      "implementation": "native_vector",
+      "arrow_direction_status": "from source to destination",
+      "native_connector_endpoint_policy": "tailEnd triangle in DrawingML"
+    },
+    {
+      "id": "cosine_to_endpoint",
+      "implementation": "native_vector",
+      "arrow_direction_status": "from source to destination",
+      "native_connector_endpoint_policy": "tailEnd triangle in DrawingML"
+    },
+    {
+      "id": "grade_to_joint",
+      "implementation": "native_vector",
+      "arrow_direction_status": "from source to destination",
+      "native_connector_endpoint_policy": "tailEnd triangle in DrawingML"
+    },
+    {
+      "id": "joint_to_nearest",
+      "implementation": "native_vector",
+      "arrow_direction_status": "from source to destination",
+      "native_connector_endpoint_policy": "tailEnd triangle in DrawingML"
+    }
+  ],
+  "legendItems": [
+    "eye labels L/R",
+    "positive/negative pair fill",
+    "dataset role accent colors"
+  ],
+  "smallIcons": [],
+  "complexGeneratedAssets": [],
+  "referenceGuidedAssetFactory": "Not applicable: all complex images are original dataset photographs; no generated symbols or icon art."
+}

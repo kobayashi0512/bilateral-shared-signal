@@ -1,0 +1,14 @@
+{
+  "layout_parity": "existing five-panel framework preserved; PAPILA thumbnails added within panel E",
+  "content_parity": "original data-source images added without changing evidence roles",
+  "asset_parity": "four original DeepDRiD and two original PAPILA photographs used",
+  "route_arrow_parity": "passed: six source-to-destination routes checked in SVG and PPTX renders",
+  "small_icon_coverage": "not applicable",
+  "semantic_symbol_coverage": "not applicable",
+  "fine_region_coverage": "six photographs and six route segments inventoried",
+  "no_coarse_asset": true,
+  "reference_guided_assets": "not applicable",
+  "no_crop_gate": true,
+  "truthful_qa": "passed: SVG and saved-PPTX previews visually inspected; target-journal final-size check remains",
+  "redo_required": null
+}

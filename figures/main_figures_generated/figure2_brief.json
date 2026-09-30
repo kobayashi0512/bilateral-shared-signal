@@ -1,0 +1,38 @@
+{
+  "figure_goal": "Directly visualize acquisition hierarchy and uncertainty for the benchmark claim",
+  "paper_claim": "Cross-eye same-patient similarity exceeds grade-matched cross-patient similarity; same-eye advantage over cross-eye is unresolved",
+  "figure_type": "benchmark-plot",
+  "mode": "plot",
+  "panels": [
+    "test patient-level cosine distributions",
+    "test and validation paired gap forest"
+  ],
+  "must_keep_labels": [
+    "same eye",
+    "cross eye",
+    "grade-matched cross patient",
+    "patient bootstrap"
+  ],
+  "data": {
+    "source": "results/figure_inputs_v1.json",
+    "patient_identifiers_included": false
+  },
+  "style_constraints": [
+    "180 mm width",
+    "Arial",
+    "white background",
+    "color plus marker shape"
+  ],
+  "output_formats": [
+    "pdf",
+    "svg",
+    "png",
+    "tif"
+  ],
+  "verification_checklist": [
+    "43 test and 45 validation patients",
+    "five seedwise CIs not pooled",
+    "same-eye-minus-cross-eye CI includes zero",
+    "cross-eye-minus-negative CIs above zero"
+  ]
+}

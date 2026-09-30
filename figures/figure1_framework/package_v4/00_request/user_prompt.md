@@ -1,0 +1,1 @@
+Update the existing Figure 1 framework for the manuscript, preserving its scientific logic and journal-ready minimal style while showing more authentic dataset source photographs. Keep text, vectors, labels, and arrows editable; use raster only for source fundus photographs.

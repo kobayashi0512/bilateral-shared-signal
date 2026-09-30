@@ -1,0 +1,50 @@
+[
+  {
+    "asset": "L1.jpg",
+    "dataset": "DeepDRiD",
+    "source_repository": "https://github.com/deepdrdoc/DeepDRiD",
+    "source_license": "CC BY-SA 4.0",
+    "changes": "resized for display only",
+    "sha256": "3c0b886e6f9c288a41bafc2052345460580dbcedbf0d4c10d902f57a37c041a8"
+  },
+  {
+    "asset": "L2.jpg",
+    "dataset": "DeepDRiD",
+    "source_repository": "https://github.com/deepdrdoc/DeepDRiD",
+    "source_license": "CC BY-SA 4.0",
+    "changes": "resized for display only",
+    "sha256": "9d1ae8ed2b0d29f3495c1e4b56603dfa8e0df7194ed51605ce5a6842b05618fe"
+  },
+  {
+    "asset": "R1.jpg",
+    "dataset": "DeepDRiD",
+    "source_repository": "https://github.com/deepdrdoc/DeepDRiD",
+    "source_license": "CC BY-SA 4.0",
+    "changes": "resized for display only",
+    "sha256": "be176ccce3c854c9d89ef2ace539883d109fa2b7280221c620401cf4c0c297c0"
+  },
+  {
+    "asset": "R2.jpg",
+    "dataset": "DeepDRiD",
+    "source_repository": "https://github.com/deepdrdoc/DeepDRiD",
+    "source_license": "CC BY-SA 4.0",
+    "changes": "resized for display only",
+    "sha256": "164b6f829e3558ad95ef79464600a57b765e2dd6f20039bea6898cecfec89c4d"
+  },
+  {
+    "asset": "right_eye_example.jpg",
+    "dataset": "PAPILA",
+    "source_repository": "https://figshare.com/articles/dataset/PAPILA/14798004",
+    "source_license": "GPL-3.0+ (Figshare v2 record)",
+    "changes": "resized for display only",
+    "sha256": "0a196e4788edc61f61d9db58ca37d1719661d08aa2dc9fbffb92ddd326abf7c7"
+  },
+  {
+    "asset": "left_eye_example.jpg",
+    "dataset": "PAPILA",
+    "source_repository": "https://figshare.com/articles/dataset/PAPILA/14798004",
+    "source_license": "GPL-3.0+ (Figshare v2 record)",
+    "changes": "resized for display only",
+    "sha256": "7a3e240761b9c11dc4ca6350ed0e3f3ee18f239557a3e25a89e715f30e4e332d"
+  }
+]

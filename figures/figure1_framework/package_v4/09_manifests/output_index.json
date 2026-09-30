@@ -1,0 +1,17 @@
+{
+  "figure_slug": "figure1_framework",
+  "mode": "image-to-editable; source photos added to existing framework by user request",
+  "package_root": "figures/figure1_framework/package_v4",
+  "final_pptx": "figures/figure1_framework/package_v4/06_editable_pptx/figure1_framework.pptx",
+  "final_svg": "figures/figure1_framework/package_v4/07_svg_export/figure1_framework.svg",
+  "preview_pptx": "figures/figure1_framework/package_v4/08_previews/preview_pptx.png",
+  "preview_svg": "figures/figure1_framework/package_v4/08_previews/preview_svg.png",
+  "selected_master": "figures/figure1_framework/package_v4/02_image2_master/master_selected/previous_framework_reference.png",
+  "source_reference": "figures/figure1_framework/assets/previous_framework_reference.png",
+  "asset_manifest": "figures/figure1_framework/package_v4/09_manifests/asset_manifest.json",
+  "editability_manifest": "figures/figure1_framework/package_v4/09_manifests/editability_manifest.json",
+  "master_layout_manifest": "figures/figure1_framework/package_v4/09_manifests/master_layout_manifest.json",
+  "visual_diff_report": "figures/figure1_framework/package_v4/09_manifests/visual_diff_report.json",
+  "qa_notes": "figures/figure1_framework/package_v4/10_qa/QA_notes.md",
+  "known_issues": "figures/figure1_framework/package_v4/10_qa/known_issues.md"
+}
