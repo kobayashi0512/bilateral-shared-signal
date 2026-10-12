@@ -179,7 +179,7 @@ def aggregate_pair(rows: pd.DataFrame) -> list[dict]:
         result = {"split": split, "view_combination": combination, "n_seeds": int(len(group)), "n_patients": int(group["n_positive"].iloc[0])}
         for col in numeric:
             result[f"{col}_mean"] = float(group[col].mean())
-            result[f"{col}_std"] = float(group[col].std(ddof=0))
+            result[f"{col}_std"] = float(group[col].std(ddof=1))
         out.append(result)
     return out
 
@@ -203,7 +203,7 @@ def aggregate_hierarchy(rows: pd.DataFrame) -> list[dict]:
         }
         for col in numeric:
             result[f"{col}_mean"] = float(group[col].mean())
-            result[f"{col}_std"] = float(group[col].std(ddof=0))
+            result[f"{col}_std"] = float(group[col].std(ddof=1))
         out.append(result)
     return out
 

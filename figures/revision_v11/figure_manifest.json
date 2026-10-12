@@ -1,0 +1,27 @@
+{
+  "figure_set": "revision_v11",
+  "source_data": "results/revision_v11/revision_v11_conditional_audit.json",
+  "patient_identifiers_in_plot_data": false,
+  "original_user_adjusted_figure_1_modified": false,
+  "formats": [
+    "PDF",
+    "SVG",
+    "PNG"
+  ],
+  "figures": [
+    "figure2_hierarchy",
+    "figure3_controls",
+    "figure4_transfer"
+  ],
+  "figure_4_source_photographs": [
+    "figure4_transfer/assets/figure4_left_eye.jpg",
+    "figure4_transfer/assets/figure4_right_eye.jpg"
+  ],
+  "figure_4_source_photographs_included_as_separate_files": false,
+  "notes": [
+    "Numeric plots use frozen archived feature evaluations; no model retrained.",
+    "PAPILA panel is the external evaluation of the frozen raw baseline only.",
+    "No PAPILA patient identifier is displayed.",
+    "The released SVG/PDF/PNG figure embeds the illustrative PAPILA photographs; separate source JPEGs are not redistributed. Regeneration of panel A requires authorized local image files at the listed paths."
+  ]
+}

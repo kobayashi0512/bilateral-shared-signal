@@ -298,7 +298,7 @@ def aggregate(rows: list[dict[str,Any]], stage: str) -> list[dict[str,Any]]:
                 v=r
                 for key in path: v=v[key]
                 vals.append(float(v))
-            return float(np.mean(vals)),float(np.std(vals,ddof=0))
+            return float(np.mean(vals)),float(np.std(vals,ddof=1))
         record={"stage":stage,"variant":var,"n_seeds":len(x)}
         for label,path in (("joint_pair_auc",("deepdrid_pair", "pair_id_auroc")),("pair_gap",("deepdrid_pair","pair_gap")),
                            ("same_eye_e",("noncollapse","same_eye_e_cosine")),("h_grade_probe",("probes","h_grade","balanced_accuracy")),
@@ -399,8 +399,24 @@ def main() -> None:
             rows.append({"stage":"validation","seed":seed,"variant":variant,"deepdrid_pair":pair_metrics(m,val,seed,True),"noncollapse":noncollapse(m,val),"probes":{"h_grade":probe(m,train,val,"h","grade"),"h_quality":probe(m,train,val,"h","quality_tier"),"d_grade":probe(m,train,val,"d","grade")}})
             print(json.dumps({"stage":"validation","seed":seed,"variant":variant,"auc":rows[-1]["deepdrid_pair"]["pair_id_auroc"]}),flush=True)
     agg_val=aggregate(rows,"validation")
-    # Predeclared selection: highest mean joint-matched validation AUROC among noncollapsed variants.
-    eligible=[r for r in agg_val if r["same_eye_e_mean"]>0 and all(np.isfinite(r[k]) for k in ("joint_pair_auc_mean","h_grade_probe_mean","d_grade_probe_mean"))]
+    # Require an auditable non-collapse margin in all three branches before
+    # ranking variants by joint-matched validation AUROC. The 0.10 floor is
+    # aligned with the variance-floor scale used by the training objective.
+    branch_std_floor=0.10
+    branch_std_by_variant={}
+    for variant in {r["variant"] for r in rows if r["stage"]=="validation"}:
+        variant_rows=[r for r in rows if r["stage"]=="validation" and r["variant"]==variant]
+        branch_std_by_variant[variant]={
+            key:float(np.mean([r["noncollapse"][key] for r in variant_rows]))
+            for key in ("h_mean_feature_std","d_mean_feature_std","e_mean_feature_std")
+        }
+    eligible=[r for r in agg_val if all(
+        np.isfinite(branch_std_by_variant[r["variant"]][key])
+        and branch_std_by_variant[r["variant"]][key]>=branch_std_floor
+        for key in ("h_mean_feature_std","d_mean_feature_std","e_mean_feature_std")
+    ) and all(np.isfinite(r[k]) for k in ("joint_pair_auc_mean","h_grade_probe_mean","d_grade_probe_mean"))]
+    if not eligible:
+        raise RuntimeError("No validation variant passes the branch non-collapse floor")
     chosen=max(eligible,key=lambda r:r["joint_pair_auc_mean"])
     # Refit all predeclared variants to avoid a cherry-picked post-selection test table.
     for seed in args.seeds:
@@ -411,11 +427,11 @@ def main() -> None:
     selected_std = [r["noncollapse"][key] for r in rows if r["stage"] == "validation" and r["variant"] == chosen["variant"] for key in ("h_mean_feature_std", "d_mean_feature_std", "e_mean_feature_std")]
     def control_summary(cases, joint):
         values=[raw_pair_metrics(cases,s,joint) for s in args.seeds]
-        return {"n_patients":len(cases),"per_seed":values,"pair_id_auroc_mean":float(np.mean([x["pair_id_auroc"] for x in values])),"pair_id_auroc_sd":float(np.std([x["pair_id_auroc"] for x in values],ddof=0))}
+        return {"n_patients":len(cases),"per_seed":values,"pair_id_auroc_mean":float(np.mean([x["pair_id_auroc"] for x in values])),"pair_id_auroc_sd":float(np.std([x["pair_id_auroc"] for x in values],ddof=1))}
     raw_controls={"validation":control_summary(val,True),"test":control_summary(test,True),"cfp_patientmax":control_summary(ext_max,False),"cfp_eyemode":control_summary(ext_eye,False)}
     selected_test=[r for r in rows if r["stage"]=="refit_test" and r["variant"]==chosen["variant"]]
     selected_max=float(np.mean([r["external_patientmax"]["pair_id_auroc"] for r in selected_test]));selected_eye=float(np.mean([r["external_eyemode"]["pair_id_auroc"] for r in selected_test]))
-    selection={"selected_variant":chosen["variant"],"selection_metric":"mean validation joint grade×quality matched pair-ID AUROC","selected_validation_auc":chosen["joint_pair_auc_mean"],"minimum_branch_std":float(min(selected_std)),"selected_external_patientmax_auc":selected_max,"selected_external_eyemode_auc":selected_eye,"external_patientmax_drop_vs_raw":float(raw_controls["cfp_patientmax"]["pair_id_auroc_mean"]-selected_max),"external_eyemode_drop_vs_raw":float(raw_controls["cfp_eyemode"]["pair_id_auroc_mean"]-selected_eye)}
+    selection={"selected_variant":chosen["variant"],"selection_metric":"mean validation joint grade×quality matched pair-ID AUROC among variants passing the branch non-collapse floor","noncollapse_branch_mean_std_floor":branch_std_floor,"validation_branch_mean_std_by_variant":branch_std_by_variant,"selected_validation_auc":chosen["joint_pair_auc_mean"],"minimum_branch_std":float(min(selected_std)),"selected_external_patientmax_auc":selected_max,"selected_external_eyemode_auc":selected_eye,"external_patientmax_drop_vs_raw":float(raw_controls["cfp_patientmax"]["pair_id_auroc_mean"]-selected_max),"external_eyemode_drop_vs_raw":float(raw_controls["cfp_eyemode"]["pair_id_auroc_mean"]-selected_eye)}
     payload={"protocol":"r2_1_hcbfd_low_capacity_frozen_feature_screen_v1","scope":"screen only; no novelty claim","selection_discipline":"DeepDRiD train-only fit; validation joint grade×quality matched pair-ID plus non-collapse; test/CFP-OCT not used for selection","feature_input":{"deepdrid":str(args.deep_features),"cfp_oct":str(args.cfp_features)},"four_view_audit":audit,"matching_feasibility":feasibility,"conditional_endpoint_population":"Only strata with at least two patients in the evaluated split are retained. Singleton patients are logged and excluded rather than given an unmatched or relaxed negative.","external_matching":"predefined grade-only (two label schemas); CFP-OCT has no quality-tier field and is never used to select variants","variants":list(variants),"epochs":args.epochs,"seeds":args.seeds,"rows":rows,"aggregate":aggregate(rows,"validation")+aggregate(rows,"refit_test"),"raw_controls":raw_controls,"selection":selection}
     args.out_dir.mkdir(parents=True,exist_ok=True);(args.out_dir/"deepdrid_r21_hcbfd_feature_screen_v1.json").write_text(json.dumps(payload,ensure_ascii=False,indent=2)+"\n")
     flat=[]

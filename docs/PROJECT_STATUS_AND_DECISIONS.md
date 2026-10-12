@@ -2,7 +2,7 @@
 
 ## Status at manuscript release
 
-This release accompanies the v10 manuscript, which adds the public artifact URL and updates Figure 1 to show a small, illustrative PAPILA OD/OS image pair alongside the four DeepDRiD views already present. The study remains a conditional bilateral correspondence evaluation; the release does not change the frozen analysis or scientific results.
+The current release accompanies manuscript version 1.8, titled “Evaluating Same-Patient Matching Between Left- and Right-Eye Fundus Images Under Disease and Image-Quality Controls.” It updates dataset-source URLs and cites the source ethics/consent procedures for DeepDRiD, PAPILA, and CFP–OCT; the analyses and scientific results are unchanged from version 1.7. The release also includes the revision v11 aggregate audit and current editable vector figures. The study remains a conditional bilateral correspondence evaluation.
 
 ## Dataset roles
 

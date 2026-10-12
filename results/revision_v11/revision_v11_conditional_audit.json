@@ -1,0 +1,1809 @@
+{
+  "protocol": "revision_v11_eye_signature_and_patient_node_bootstrap",
+  "n_bootstrap": 3000,
+  "seeds": [
+    20260922,
+    20260923,
+    20260924,
+    20260925,
+    20260926
+  ],
+  "papila_seeds": [
+    20260921,
+    20260922,
+    20260923,
+    20260924,
+    20260925
+  ],
+  "deepdrid": {
+    "manifest": "LOCAL_INPUT_NOT_INCLUDED",
+    "features": "LOCAL_INPUT_NOT_INCLUDED",
+    "n_complete_patients": 300,
+    "bilateral_DR_grade_discordant_patients": 134,
+    "split_counts": {
+      "train": 210,
+      "val": 46,
+      "test": 44
+    },
+    "heldout_eye_grade_discordant_patients": 20,
+    "old_protocol_full_cohort": [
+      {
+        "condition": "patient_DR_grade",
+        "n_patients": 300,
+        "match_columns": [
+          "patient_grade"
+        ],
+        "seed_sd_definition": "sample SD across five fixed assignments (ddof=1)",
+        "auroc_mean": 0.88268,
+        "auroc_seed_sd": 0.00855308550202431,
+        "node_bootstrap_interval_envelope": [
+          0.8363173288003193,
+          0.924030757910228
+        ],
+        "rows": [
+          {
+            "seed": 20260922,
+            "n_patients": 300,
+            "pair_identity_auroc": 0.8807555555555555,
+            "same_patient_mean": 0.9097023171726956,
+            "negative_mean": 0.8160858917641313,
+            "cosine_gap": 0.0936164254085643,
+            "node_bootstrap_95ci": [
+              0.8456213044643586,
+              0.9120921792496177
+            ]
+          },
+          {
+            "seed": 20260923,
+            "n_patients": 300,
+            "pair_identity_auroc": 0.8737222222222222,
+            "same_patient_mean": 0.9097023171726956,
+            "negative_mean": 0.8174329198576408,
+            "cosine_gap": 0.09226939731505479,
+            "node_bootstrap_95ci": [
+              0.8363173288003193,
+              0.9080900428724544
+            ]
+          },
+          {
+            "seed": 20260924,
+            "n_patients": 300,
+            "pair_identity_auroc": 0.8759777777777777,
+            "same_patient_mean": 0.9097023171726956,
+            "negative_mean": 0.8183646646339306,
+            "cosine_gap": 0.09133765253876491,
+            "node_bootstrap_95ci": [
+              0.8386890499203324,
+              0.9098008696633909
+            ]
+          },
+          {
+            "seed": 20260925,
+            "n_patients": 300,
+            "pair_identity_auroc": 0.8893333333333334,
+            "same_patient_mean": 0.9097023171726956,
+            "negative_mean": 0.8158995125510958,
+            "cosine_gap": 0.09380280462159973,
+            "node_bootstrap_95ci": [
+              0.8552602458811658,
+              0.9195520724486242
+            ]
+          },
+          {
+            "seed": 20260926,
+            "n_patients": 300,
+            "pair_identity_auroc": 0.893611111111111,
+            "same_patient_mean": 0.9097023171726956,
+            "negative_mean": 0.8153134942890454,
+            "cosine_gap": 0.09438882288365014,
+            "node_bootstrap_95ci": [
+              0.8586781179684989,
+              0.924030757910228
+            ]
+          }
+        ]
+      },
+      {
+        "condition": "patient_grade_x_patient_quality_tier",
+        "n_patients": 300,
+        "match_columns": [
+          "patient_grade",
+          "quality_tier"
+        ],
+        "seed_sd_definition": "sample SD across five fixed assignments (ddof=1)",
+        "auroc_mean": 0.8660133333333334,
+        "auroc_seed_sd": 0.008785395428750264,
+        "node_bootstrap_interval_envelope": [
+          0.8139578342260455,
+          0.9094297802587277
+        ],
+        "rows": [
+          {
+            "seed": 20260922,
+            "n_patients": 300,
+            "pair_identity_auroc": 0.8601555555555556,
+            "same_patient_mean": 0.9097023171726956,
+            "negative_mean": 0.8253487871303972,
+            "cosine_gap": 0.0843535300422984,
+            "node_bootstrap_95ci": [
+              0.820528279023297,
+              0.8951953130089245
+            ]
+          },
+          {
+            "seed": 20260923,
+            "n_patients": 300,
+            "pair_identity_auroc": 0.8773333333333334,
+            "same_patient_mean": 0.9097023171726956,
+            "negative_mean": 0.8238474125701053,
+            "cosine_gap": 0.08585490460259027,
+            "node_bootstrap_95ci": [
+              0.843469623655914,
+              0.9094297802587277
+            ]
+          },
+          {
+            "seed": 20260924,
+            "n_patients": 300,
+            "pair_identity_auroc": 0.8694666666666666,
+            "same_patient_mean": 0.9097023171726956,
+            "negative_mean": 0.8272078064030395,
+            "cosine_gap": 0.08249451076965608,
+            "node_bootstrap_95ci": [
+              0.8352574695121951,
+              0.9018738852499347
+            ]
+          },
+          {
+            "seed": 20260925,
+            "n_patients": 300,
+            "pair_identity_auroc": 0.8684333333333334,
+            "same_patient_mean": 0.9097023171726956,
+            "negative_mean": 0.8288848357321924,
+            "cosine_gap": 0.08081748144050316,
+            "node_bootstrap_95ci": [
+              0.8301400564996195,
+              0.9010144552248591
+            ]
+          },
+          {
+            "seed": 20260926,
+            "n_patients": 300,
+            "pair_identity_auroc": 0.8546777777777779,
+            "same_patient_mean": 0.9097023171726956,
+            "negative_mean": 0.8323845171460933,
+            "cosine_gap": 0.07731780002660227,
+            "node_bootstrap_95ci": [
+              0.8139578342260455,
+              0.8901159382241145
+            ]
+          }
+        ]
+      },
+      {
+        "condition": "patient_DR_grade_nearest_patient_quality",
+        "n_patients": 300,
+        "match_columns": [
+          "patient_grade"
+        ],
+        "seed_sd_definition": "sample SD across five fixed assignments (ddof=1)",
+        "auroc_mean": 0.8500222222222222,
+        "auroc_seed_sd": 0.004365775990588609,
+        "node_bootstrap_interval_envelope": [
+          0.7989064304806454,
+          0.8952495980721787
+        ],
+        "rows": [
+          {
+            "seed": 20260922,
+            "n_patients": 300,
+            "pair_identity_auroc": 0.8548666666666667,
+            "same_patient_mean": 0.9097023171726956,
+            "negative_mean": 0.8347067528817225,
+            "cosine_gap": 0.0749955642909731,
+            "node_bootstrap_95ci": [
+              0.8104381637402158,
+              0.8952495980721787
+            ],
+            "mean_abs_patient_quality_composite_difference": 0.023958333333333328
+          },
+          {
+            "seed": 20260923,
+            "n_patients": 300,
+            "pair_identity_auroc": 0.8483333333333334,
+            "same_patient_mean": 0.9097023171726956,
+            "negative_mean": 0.8355164768441518,
+            "cosine_gap": 0.0741858403285438,
+            "node_bootstrap_95ci": [
+              0.804485813676352,
+              0.8892789592372689
+            ],
+            "mean_abs_patient_quality_composite_difference": 0.02412499999999999
+          },
+          {
+            "seed": 20260924,
+            "n_patients": 300,
+            "pair_identity_auroc": 0.8544888888888889,
+            "same_patient_mean": 0.9097023171726956,
+            "negative_mean": 0.8348274613604895,
+            "cosine_gap": 0.0748748558122061,
+            "node_bootstrap_95ci": [
+              0.8117830505342238,
+              0.8922425590773364
+            ],
+            "mean_abs_patient_quality_composite_difference": 0.023874999999999993
+          },
+          {
+            "seed": 20260925,
+            "n_patients": 300,
+            "pair_identity_auroc": 0.8468888888888888,
+            "same_patient_mean": 0.9097023171726956,
+            "negative_mean": 0.8362092257750127,
+            "cosine_gap": 0.0734930913976829,
+            "node_bootstrap_95ci": [
+              0.801607221909915,
+              0.8877654077285867
+            ],
+            "mean_abs_patient_quality_composite_difference": 0.02399999999999999
+          },
+          {
+            "seed": 20260926,
+            "n_patients": 300,
+            "pair_identity_auroc": 0.8455333333333334,
+            "same_patient_mean": 0.9097023171726956,
+            "negative_mean": 0.8364258382474116,
+            "cosine_gap": 0.073276478925284,
+            "node_bootstrap_95ci": [
+              0.7989064304806454,
+              0.8851810717490753
+            ],
+            "mean_abs_patient_quality_composite_difference": 0.023999999999999994
+          }
+        ]
+      }
+    ],
+    "old_protocol_heldout_common_denominator": {
+      "n_patients": 42,
+      "conditions": [
+        {
+          "condition": "patient_DR_grade",
+          "n_patients": 42,
+          "match_columns": [
+            "patient_grade"
+          ],
+          "seed_sd_definition": "sample SD across five fixed assignments (ddof=1)",
+          "auroc_mean": 0.8548752834467119,
+          "auroc_seed_sd": 0.017264673846758605,
+          "node_bootstrap_interval_envelope": [
+            0.7322746331236898,
+            0.9554557091653866
+          ],
+          "rows": [
+            {
+              "seed": 20260922,
+              "n_patients": 42,
+              "pair_identity_auroc": 0.8537414965986395,
+              "same_patient_mean": 0.900983703312366,
+              "negative_mean": 0.8067651326832239,
+              "cosine_gap": 0.09421857062914207,
+              "node_bootstrap_95ci": [
+                0.7632941176470588,
+                0.9333357628765793
+              ]
+            },
+            {
+              "seed": 20260923,
+              "n_patients": 42,
+              "pair_identity_auroc": 0.8475056689342403,
+              "same_patient_mean": 0.900983703312366,
+              "negative_mean": 0.8096090855045632,
+              "cosine_gap": 0.09137461780780276,
+              "node_bootstrap_95ci": [
+                0.7584159742696328,
+                0.9323058035714286
+              ]
+            },
+            {
+              "seed": 20260924,
+              "n_patients": 42,
+              "pair_identity_auroc": 0.8514739229024944,
+              "same_patient_mean": 0.900983703312366,
+              "negative_mean": 0.8055980497807506,
+              "cosine_gap": 0.09538565353161543,
+              "node_bootstrap_95ci": [
+                0.73808170995671,
+                0.9471752763605442
+              ]
+            },
+            {
+              "seed": 20260925,
+              "n_patients": 42,
+              "pair_identity_auroc": 0.8837868480725624,
+              "same_patient_mean": 0.900983703312366,
+              "negative_mean": 0.8108336671080761,
+              "cosine_gap": 0.09015003620428985,
+              "node_bootstrap_95ci": [
+                0.8058946757316322,
+                0.9554557091653866
+              ]
+            },
+            {
+              "seed": 20260926,
+              "n_patients": 42,
+              "pair_identity_auroc": 0.8378684807256235,
+              "same_patient_mean": 0.900983703312366,
+              "negative_mean": 0.8110521621525218,
+              "cosine_gap": 0.08993154115984414,
+              "node_bootstrap_95ci": [
+                0.7322746331236898,
+                0.9293002210555402
+              ]
+            }
+          ]
+        },
+        {
+          "condition": "patient_grade_x_patient_quality_tier",
+          "n_patients": 42,
+          "match_columns": [
+            "patient_grade",
+            "quality_tier"
+          ],
+          "seed_sd_definition": "sample SD across five fixed assignments (ddof=1)",
+          "auroc_mean": 0.8348072562358275,
+          "auroc_seed_sd": 0.014964268437094207,
+          "node_bootstrap_interval_envelope": [
+            0.6852989446043529,
+            0.939227329687856
+          ],
+          "rows": [
+            {
+              "seed": 20260922,
+              "n_patients": 42,
+              "pair_identity_auroc": 0.8140589569160999,
+              "same_patient_mean": 0.900983703312366,
+              "negative_mean": 0.8190384801329341,
+              "cosine_gap": 0.08194522317943187,
+              "node_bootstrap_95ci": [
+                0.6852989446043529,
+                0.9172201439864485
+              ]
+            },
+            {
+              "seed": 20260923,
+              "n_patients": 42,
+              "pair_identity_auroc": 0.8395691609977325,
+              "same_patient_mean": 0.900983703312366,
+              "negative_mean": 0.8234136728940884,
+              "cosine_gap": 0.07757003041827759,
+              "node_bootstrap_95ci": [
+                0.7132466356107661,
+                0.9359410430839002
+              ]
+            },
+            {
+              "seed": 20260924,
+              "n_patients": 42,
+              "pair_identity_auroc": 0.828798185941043,
+              "same_patient_mean": 0.900983703312366,
+              "negative_mean": 0.8237437543289717,
+              "cosine_gap": 0.07723994898339426,
+              "node_bootstrap_95ci": [
+                0.7131965058750773,
+                0.9189273124055733
+              ]
+            },
+            {
+              "seed": 20260925,
+              "n_patients": 42,
+              "pair_identity_auroc": 0.8548752834467119,
+              "same_patient_mean": 0.900983703312366,
+              "negative_mean": 0.8182365512876127,
+              "cosine_gap": 0.08274715202475325,
+              "node_bootstrap_95ci": [
+                0.760895752895753,
+                0.939227329687856
+              ]
+            },
+            {
+              "seed": 20260926,
+              "n_patients": 42,
+              "pair_identity_auroc": 0.8367346938775511,
+              "same_patient_mean": 0.900983703312366,
+              "negative_mean": 0.8167356658232007,
+              "cosine_gap": 0.08424803748916532,
+              "node_bootstrap_95ci": [
+                0.7271315958815959,
+                0.9329038149350649
+              ]
+            }
+          ]
+        },
+        {
+          "condition": "patient_DR_grade_nearest_patient_quality",
+          "n_patients": 42,
+          "match_columns": [
+            "patient_grade"
+          ],
+          "seed_sd_definition": "sample SD across five fixed assignments (ddof=1)",
+          "auroc_mean": 0.8731292517006803,
+          "auroc_seed_sd": 0.005124039246474713,
+          "node_bootstrap_interval_envelope": [
+            0.7763101237135391,
+            0.9523958333333333
+          ],
+          "rows": [
+            {
+              "seed": 20260922,
+              "n_patients": 42,
+              "pair_identity_auroc": 0.8781179138321996,
+              "same_patient_mean": 0.900983703312366,
+              "negative_mean": 0.8156547241510879,
+              "cosine_gap": 0.08532897916127813,
+              "node_bootstrap_95ci": [
+                0.7994905742617413,
+                0.9490982716874008
+              ],
+              "mean_abs_patient_quality_composite_difference": 0.06636904761904763
+            },
+            {
+              "seed": 20260923,
+              "n_patients": 42,
+              "pair_identity_auroc": 0.8735827664399093,
+              "same_patient_mean": 0.900983703312366,
+              "negative_mean": 0.8136046719173012,
+              "cosine_gap": 0.08737903139506475,
+              "node_bootstrap_95ci": [
+                0.8005749458874459,
+                0.942862950058072
+              ],
+              "mean_abs_patient_quality_composite_difference": 0.06636904761904763
+            },
+            {
+              "seed": 20260924,
+              "n_patients": 42,
+              "pair_identity_auroc": 0.8684807256235828,
+              "same_patient_mean": 0.900983703312366,
+              "negative_mean": 0.8164377417285111,
+              "cosine_gap": 0.08454596158385486,
+              "node_bootstrap_95ci": [
+                0.7900956435205662,
+                0.9391647309330237
+              ],
+              "mean_abs_patient_quality_composite_difference": 0.06636904761904763
+            },
+            {
+              "seed": 20260925,
+              "n_patients": 42,
+              "pair_identity_auroc": 0.8673469387755102,
+              "same_patient_mean": 0.900983703312366,
+              "negative_mean": 0.809829152575286,
+              "cosine_gap": 0.09115455073708001,
+              "node_bootstrap_95ci": [
+                0.7763101237135391,
+                0.9444444444444444
+              ],
+              "mean_abs_patient_quality_composite_difference": 0.06636904761904763
+            },
+            {
+              "seed": 20260926,
+              "n_patients": 42,
+              "pair_identity_auroc": 0.8781179138321996,
+              "same_patient_mean": 0.900983703312366,
+              "negative_mean": 0.8149718653429806,
+              "cosine_gap": 0.08601183796938539,
+              "node_bootstrap_95ci": [
+                0.8010752688172043,
+                0.9523958333333333
+              ],
+              "mean_abs_patient_quality_composite_difference": 0.06636904761904763
+            }
+          ]
+        }
+      ]
+    },
+    "strict_exact_signature_controls": {
+      "full_cohort": {
+        "n_patients_before_exact_matching": 300,
+        "n_common_eligible_patients": 293,
+        "signature_only": {
+          "condition": "exact_ordered_bilateral_DR_signature",
+          "n_patients": 293,
+          "match_columns": [
+            "bilateral_grade_signature"
+          ],
+          "seed_sd_definition": "sample SD across five fixed assignments (ddof=1)",
+          "auroc_mean": 0.8846835723188388,
+          "auroc_seed_sd": 0.008924275539441175,
+          "node_bootstrap_interval_envelope": [
+            0.8342006589910943,
+            0.9241694153209855
+          ],
+          "rows": [
+            {
+              "seed": 20260922,
+              "n_patients": 293,
+              "pair_identity_auroc": 0.8913324558235972,
+              "same_patient_mean": 0.9104877816784824,
+              "negative_mean": 0.8174127484883947,
+              "cosine_gap": 0.0930750331900877,
+              "node_bootstrap_95ci": [
+                0.8562405090365768,
+                0.9209155795050081
+              ],
+              "mean_abs_right_eye_quality_difference": 0.22107508532423206,
+              "max_abs_right_eye_quality_difference": 0.7
+            },
+            {
+              "seed": 20260923,
+              "n_patients": 293,
+              "pair_identity_auroc": 0.8715302449649966,
+              "same_patient_mean": 0.9104877816784824,
+              "negative_mean": 0.8227623915766714,
+              "cosine_gap": 0.08772539010181102,
+              "node_bootstrap_95ci": [
+                0.8342006589910943,
+                0.9059398884776234
+              ],
+              "mean_abs_right_eye_quality_difference": 0.22312286689419794,
+              "max_abs_right_eye_quality_difference": 0.775
+            },
+            {
+              "seed": 20260924,
+              "n_patients": 293,
+              "pair_identity_auroc": 0.8822467355472982,
+              "same_patient_mean": 0.9104877816784824,
+              "negative_mean": 0.8147966461548384,
+              "cosine_gap": 0.09569113552364406,
+              "node_bootstrap_95ci": [
+                0.8432790726105281,
+                0.9159599699195927
+              ],
+              "mean_abs_right_eye_quality_difference": 0.22542662116040954,
+              "max_abs_right_eye_quality_difference": 0.7625
+            },
+            {
+              "seed": 20260925,
+              "n_patients": 293,
+              "pair_identity_auroc": 0.8944192710456732,
+              "same_patient_mean": 0.9104877816784824,
+              "negative_mean": 0.8145074607065287,
+              "cosine_gap": 0.09598032097195375,
+              "node_bootstrap_95ci": [
+                0.8607990736226231,
+                0.9241694153209855
+              ],
+              "mean_abs_right_eye_quality_difference": 0.2194539249146758,
+              "max_abs_right_eye_quality_difference": 0.825
+            },
+            {
+              "seed": 20260926,
+              "n_patients": 293,
+              "pair_identity_auroc": 0.883889154212629,
+              "same_patient_mean": 0.9104877816784824,
+              "negative_mean": 0.8149497370699614,
+              "cosine_gap": 0.095538044608521,
+              "node_bootstrap_95ci": [
+                0.8468160196334593,
+                0.9178419341178118
+              ],
+              "mean_abs_right_eye_quality_difference": 0.23131399317406146,
+              "max_abs_right_eye_quality_difference": 0.825
+            }
+          ]
+        },
+        "signature_plus_right_eye_quality": {
+          "condition": "bilateral_DR_signature_plus_right_eye_quality_tier",
+          "n_patients": 293,
+          "match_columns": [
+            "bilateral_grade_signature",
+            "right_eye_quality_tier"
+          ],
+          "seed_sd_definition": "sample SD across five fixed assignments (ddof=1)",
+          "auroc_mean": 0.8700019802210859,
+          "auroc_seed_sd": 0.005222872853642251,
+          "node_bootstrap_interval_envelope": [
+            0.8253226754193956,
+            0.9122773559038337
+          ],
+          "rows": [
+            {
+              "seed": 20260922,
+              "n_patients": 293,
+              "pair_identity_auroc": 0.8782979417349066,
+              "same_patient_mean": 0.9104877816784824,
+              "negative_mean": 0.8206536320921576,
+              "cosine_gap": 0.08983414958632485,
+              "node_bootstrap_95ci": [
+                0.8394629446517744,
+                0.9122773559038337
+              ],
+              "mean_abs_right_eye_quality_difference": 0.07901023890784982,
+              "max_abs_right_eye_quality_difference": 0.4750000000000001
+            },
+            {
+              "seed": 20260923,
+              "n_patients": 293,
+              "pair_identity_auroc": 0.8719845309788117,
+              "same_patient_mean": 0.9104877816784824,
+              "negative_mean": 0.8237518822454045,
+              "cosine_gap": 0.08673589943307791,
+              "node_bootstrap_95ci": [
+                0.8344810111758014,
+                0.9056450036454315
+              ],
+              "mean_abs_right_eye_quality_difference": 0.08284982935153583,
+              "max_abs_right_eye_quality_difference": 0.32500000000000007
+            },
+            {
+              "seed": 20260924,
+              "n_patients": 293,
+              "pair_identity_auroc": 0.8673950774033476,
+              "same_patient_mean": 0.9104877816784824,
+              "negative_mean": 0.8209574370116658,
+              "cosine_gap": 0.08953034466681664,
+              "node_bootstrap_95ci": [
+                0.8253392542290716,
+                0.9046409371059849
+              ],
+              "mean_abs_right_eye_quality_difference": 0.08319112627986348,
+              "max_abs_right_eye_quality_difference": 0.3125
+            },
+            {
+              "seed": 20260925,
+              "n_patients": 293,
+              "pair_identity_auroc": 0.8664282635790749,
+              "same_patient_mean": 0.9104877816784824,
+              "negative_mean": 0.825537903457879,
+              "cosine_gap": 0.0849498782206034,
+              "node_bootstrap_95ci": [
+                0.8256197593551851,
+                0.9009275170200289
+              ],
+              "mean_abs_right_eye_quality_difference": 0.07627986348122866,
+              "max_abs_right_eye_quality_difference": 0.375
+            },
+            {
+              "seed": 20260926,
+              "n_patients": 293,
+              "pair_identity_auroc": 0.8659040874092885,
+              "same_patient_mean": 0.9104877816784824,
+              "negative_mean": 0.8255766804210366,
+              "cosine_gap": 0.08491110125744583,
+              "node_bootstrap_95ci": [
+                0.8253226754193956,
+                0.902072779363397
+              ],
+              "mean_abs_right_eye_quality_difference": 0.08250853242320819,
+              "max_abs_right_eye_quality_difference": 0.475
+            }
+          ]
+        }
+      },
+      "validation": {
+        "n_patients_before_exact_matching": 46,
+        "n_common_eligible_patients": 36,
+        "signature_only": {
+          "condition": "exact_ordered_bilateral_DR_signature",
+          "n_patients": 36,
+          "match_columns": [
+            "bilateral_grade_signature"
+          ],
+          "seed_sd_definition": "sample SD across five fixed assignments (ddof=1)",
+          "auroc_mean": 0.8945987654320987,
+          "auroc_seed_sd": 0.019593296602597392,
+          "node_bootstrap_interval_envelope": [
+            0.745920844625113,
+            0.9793297282653998
+          ],
+          "rows": [
+            {
+              "seed": 20260922,
+              "n_patients": 36,
+              "pair_identity_auroc": 0.9197530864197531,
+              "same_patient_mean": 0.9107427199320417,
+              "negative_mean": 0.8020645471339823,
+              "cosine_gap": 0.10867817279805936,
+              "node_bootstrap_95ci": [
+                0.8419172932330827,
+                0.9793297282653998
+              ],
+              "mean_abs_right_eye_quality_difference": 0.21666666666666667,
+              "max_abs_right_eye_quality_difference": 0.55
+            },
+            {
+              "seed": 20260923,
+              "n_patients": 36,
+              "pair_identity_auroc": 0.8888888888888888,
+              "same_patient_mean": 0.9107427199320417,
+              "negative_mean": 0.8084141995844092,
+              "cosine_gap": 0.10232852034763251,
+              "node_bootstrap_95ci": [
+                0.7839436026936027,
+                0.966851685915306
+              ],
+              "mean_abs_right_eye_quality_difference": 0.21388888888888882,
+              "max_abs_right_eye_quality_difference": 0.525
+            },
+            {
+              "seed": 20260924,
+              "n_patients": 36,
+              "pair_identity_auroc": 0.9074074074074074,
+              "same_patient_mean": 0.9107427199320417,
+              "negative_mean": 0.8074266391873647,
+              "cosine_gap": 0.10331608074467702,
+              "node_bootstrap_95ci": [
+                0.8183134026884027,
+                0.9756972446236559
+              ],
+              "mean_abs_right_eye_quality_difference": 0.20624999999999996,
+              "max_abs_right_eye_quality_difference": 0.575
+            },
+            {
+              "seed": 20260925,
+              "n_patients": 36,
+              "pair_identity_auroc": 0.8881172839506173,
+              "same_patient_mean": 0.9107427199320417,
+              "negative_mean": 0.813035272053964,
+              "cosine_gap": 0.09770744787807772,
+              "node_bootstrap_95ci": [
+                0.7820238095238096,
+                0.9637752202330208
+              ],
+              "mean_abs_right_eye_quality_difference": 0.21527777777777773,
+              "max_abs_right_eye_quality_difference": 0.825
+            },
+            {
+              "seed": 20260926,
+              "n_patients": 36,
+              "pair_identity_auroc": 0.8688271604938271,
+              "same_patient_mean": 0.9107427199320417,
+              "negative_mean": 0.8176685083243981,
+              "cosine_gap": 0.09307421160764362,
+              "node_bootstrap_95ci": [
+                0.745920844625113,
+                0.9594017094017094
+              ],
+              "mean_abs_right_eye_quality_difference": 0.2270833333333333,
+              "max_abs_right_eye_quality_difference": 0.5875
+            }
+          ]
+        },
+        "signature_plus_right_eye_quality": {
+          "condition": "bilateral_DR_signature_plus_right_eye_quality_tier",
+          "n_patients": 36,
+          "match_columns": [
+            "bilateral_grade_signature",
+            "right_eye_quality_tier"
+          ],
+          "seed_sd_definition": "sample SD across five fixed assignments (ddof=1)",
+          "auroc_mean": 0.8776234567901234,
+          "auroc_seed_sd": 0.01723289416684398,
+          "node_bootstrap_interval_envelope": [
+            0.7277430555555555,
+            0.9711566091954023
+          ],
+          "rows": [
+            {
+              "seed": 20260922,
+              "n_patients": 36,
+              "pair_identity_auroc": 0.8734567901234568,
+              "same_patient_mean": 0.9107427199320417,
+              "negative_mean": 0.8206808315460403,
+              "cosine_gap": 0.09006188838600138,
+              "node_bootstrap_95ci": [
+                0.7600300925925926,
+                0.9608295795795796
+              ],
+              "mean_abs_right_eye_quality_difference": 0.0895833333333333,
+              "max_abs_right_eye_quality_difference": 0.5
+            },
+            {
+              "seed": 20260923,
+              "n_patients": 36,
+              "pair_identity_auroc": 0.8518518518518519,
+              "same_patient_mean": 0.9107427199320417,
+              "negative_mean": 0.827846410004033,
+              "cosine_gap": 0.08289630992800867,
+              "node_bootstrap_95ci": [
+                0.7277430555555555,
+                0.9436237373737374
+              ],
+              "mean_abs_right_eye_quality_difference": 0.09930555555555556,
+              "max_abs_right_eye_quality_difference": 0.42500000000000004
+            },
+            {
+              "seed": 20260924,
+              "n_patients": 36,
+              "pair_identity_auroc": 0.8896604938271605,
+              "same_patient_mean": 0.9107427199320417,
+              "negative_mean": 0.8113790660707129,
+              "cosine_gap": 0.09936365386132884,
+              "node_bootstrap_95ci": [
+                0.7896722769567597,
+                0.9661269501208526
+              ],
+              "mean_abs_right_eye_quality_difference": 0.09861111111111111,
+              "max_abs_right_eye_quality_difference": 0.5
+            },
+            {
+              "seed": 20260925,
+              "n_patients": 36,
+              "pair_identity_auroc": 0.8966049382716049,
+              "same_patient_mean": 0.9107427199320417,
+              "negative_mean": 0.814780088106532,
+              "cosine_gap": 0.09596263182550968,
+              "node_bootstrap_95ci": [
+                0.7881919642857143,
+                0.9711566091954023
+              ],
+              "mean_abs_right_eye_quality_difference": 0.08958333333333332,
+              "max_abs_right_eye_quality_difference": 0.5
+            },
+            {
+              "seed": 20260926,
+              "n_patients": 36,
+              "pair_identity_auroc": 0.8765432098765432,
+              "same_patient_mean": 0.9107427199320417,
+              "negative_mean": 0.8222202344588881,
+              "cosine_gap": 0.08852248547315356,
+              "node_bootstrap_95ci": [
+                0.7703611111111112,
+                0.9597707451099012
+              ],
+              "mean_abs_right_eye_quality_difference": 0.09166666666666666,
+              "max_abs_right_eye_quality_difference": 0.42500000000000004
+            }
+          ]
+        }
+      },
+      "test": {
+        "n_patients_before_exact_matching": 44,
+        "n_common_eligible_patients": 34,
+        "signature_only": {
+          "condition": "exact_ordered_bilateral_DR_signature",
+          "n_patients": 34,
+          "match_columns": [
+            "bilateral_grade_signature"
+          ],
+          "seed_sd_definition": "sample SD across five fixed assignments (ddof=1)",
+          "auroc_mean": 0.8674740484429065,
+          "auroc_seed_sd": 0.021280980099217937,
+          "node_bootstrap_interval_envelope": [
+            0.6576768207282914,
+            0.9966071428571429
+          ],
+          "rows": [
+            {
+              "seed": 20260922,
+              "n_patients": 34,
+              "pair_identity_auroc": 0.8641868512110726,
+              "same_patient_mean": 0.9132679818097231,
+              "negative_mean": 0.833417071007338,
+              "cosine_gap": 0.07985091080238516,
+              "node_bootstrap_95ci": [
+                0.7001524737802097,
+                0.9760086106811146
+              ],
+              "mean_abs_right_eye_quality_difference": 0.13382352941176473,
+              "max_abs_right_eye_quality_difference": 0.5499999999999999
+            },
+            {
+              "seed": 20260923,
+              "n_patients": 34,
+              "pair_identity_auroc": 0.8676470588235293,
+              "same_patient_mean": 0.9132679818097231,
+              "negative_mean": 0.8283193724426112,
+              "cosine_gap": 0.0849486093671119,
+              "node_bootstrap_95ci": [
+                0.7050277347781219,
+                0.9880174291938998
+              ],
+              "mean_abs_right_eye_quality_difference": 0.15147058823529413,
+              "max_abs_right_eye_quality_difference": 0.4750000000000001
+            },
+            {
+              "seed": 20260924,
+              "n_patients": 34,
+              "pair_identity_auroc": 0.8866782006920415,
+              "same_patient_mean": 0.9132679818097231,
+              "negative_mean": 0.8270502514805643,
+              "cosine_gap": 0.0862177303291588,
+              "node_bootstrap_95ci": [
+                0.7246605060943296,
+                0.9966071428571429
+              ],
+              "mean_abs_right_eye_quality_difference": 0.14411764705882352,
+              "max_abs_right_eye_quality_difference": 0.4999999999999999
+            },
+            {
+              "seed": 20260925,
+              "n_patients": 34,
+              "pair_identity_auroc": 0.8849480968858132,
+              "same_patient_mean": 0.9132679818097231,
+              "negative_mean": 0.8329238550290841,
+              "cosine_gap": 0.08034412678063907,
+              "node_bootstrap_95ci": [
+                0.7146953781512605,
+                0.9946524064171123
+              ],
+              "mean_abs_right_eye_quality_difference": 0.18308823529411766,
+              "max_abs_right_eye_quality_difference": 0.55
+            },
+            {
+              "seed": 20260926,
+              "n_patients": 34,
+              "pair_identity_auroc": 0.8339100346020761,
+              "same_patient_mean": 0.9132679818097231,
+              "negative_mean": 0.8421327284775268,
+              "cosine_gap": 0.07113525333219628,
+              "node_bootstrap_95ci": [
+                0.6576768207282914,
+                0.9644607843137255
+              ],
+              "mean_abs_right_eye_quality_difference": 0.14191176470588238,
+              "max_abs_right_eye_quality_difference": 0.4750000000000001
+            }
+          ]
+        },
+        "signature_plus_right_eye_quality": {
+          "condition": "bilateral_DR_signature_plus_right_eye_quality_tier",
+          "n_patients": 34,
+          "match_columns": [
+            "bilateral_grade_signature",
+            "right_eye_quality_tier"
+          ],
+          "seed_sd_definition": "sample SD across five fixed assignments (ddof=1)",
+          "auroc_mean": 0.8614186851211073,
+          "auroc_seed_sd": 0.006849769167760948,
+          "node_bootstrap_interval_envelope": [
+            0.6813521241830066,
+            0.9947494438952051
+          ],
+          "rows": [
+            {
+              "seed": 20260922,
+              "n_patients": 34,
+              "pair_identity_auroc": 0.8641868512110726,
+              "same_patient_mean": 0.9132679818097231,
+              "negative_mean": 0.8382332990677732,
+              "cosine_gap": 0.07503468274194991,
+              "node_bootstrap_95ci": [
+                0.683375556104795,
+                0.9947494438952051
+              ],
+              "mean_abs_right_eye_quality_difference": 0.07058823529411767,
+              "max_abs_right_eye_quality_difference": 0.22499999999999998
+            },
+            {
+              "seed": 20260923,
+              "n_patients": 34,
+              "pair_identity_auroc": 0.8546712802768166,
+              "same_patient_mean": 0.9132679818097231,
+              "negative_mean": 0.841360420502992,
+              "cosine_gap": 0.07190756130673115,
+              "node_bootstrap_95ci": [
+                0.6813521241830066,
+                0.9769483998064561
+              ],
+              "mean_abs_right_eye_quality_difference": 0.08161764705882354,
+              "max_abs_right_eye_quality_difference": 0.15000000000000002
+            },
+            {
+              "seed": 20260924,
+              "n_patients": 34,
+              "pair_identity_auroc": 0.8538062283737025,
+              "same_patient_mean": 0.9132679818097231,
+              "negative_mean": 0.8411762919690587,
+              "cosine_gap": 0.07209168984066439,
+              "node_bootstrap_95ci": [
+                0.6934900845117563,
+                0.9725022687897039
+              ],
+              "mean_abs_right_eye_quality_difference": 0.07720588235294118,
+              "max_abs_right_eye_quality_difference": 0.22499999999999998
+            },
+            {
+              "seed": 20260925,
+              "n_patients": 34,
+              "pair_identity_auroc": 0.8693771626297578,
+              "same_patient_mean": 0.9132679818097231,
+              "negative_mean": 0.8410946724775595,
+              "cosine_gap": 0.0721733093321636,
+              "node_bootstrap_95ci": [
+                0.696078431372549,
+                0.9875246270757106
+              ],
+              "mean_abs_right_eye_quality_difference": 0.07426470588235295,
+              "max_abs_right_eye_quality_difference": 0.22499999999999998
+            },
+            {
+              "seed": 20260926,
+              "n_patients": 34,
+              "pair_identity_auroc": 0.8650519031141868,
+              "same_patient_mean": 0.9132679818097231,
+              "negative_mean": 0.8414451083279441,
+              "cosine_gap": 0.07182287348177907,
+              "node_bootstrap_95ci": [
+                0.6899816176470588,
+                0.9753331715281762
+              ],
+              "mean_abs_right_eye_quality_difference": 0.07500000000000002,
+              "max_abs_right_eye_quality_difference": 0.19999999999999996
+            }
+          ]
+        }
+      }
+    },
+    "four_view_hierarchy": {
+      "validation": {
+        "split": "val",
+        "n_strict_four_view_patients_before_matching": 45,
+        "n_common_eligible_patients": 35,
+        "matching": "Exact ordered bilateral DR signature and exact right-eye quality-composite tier; anchor left-eye image is held fixed for positive and negative scores.",
+        "identity_free_patient_score_distributions": {
+          "same_eye": [
+            0.8915204951095393,
+            0.9102149119399112,
+            0.9143199163745737,
+            0.8073328306657122,
+            0.7659535877994557,
+            0.8782652612838884,
+            0.7757057762233615,
+            0.8468832660899224,
+            0.8600085571435647,
+            0.8982857236444814,
+            0.9102472382655825,
+            0.94357860259236,
+            0.8855177638492532,
+            0.7847875744576951,
+            0.9985843740908367,
+            0.7500265920635666,
+            0.7902071438793605,
+            0.747922383217664,
+            0.6427086482973802,
+            0.894870394842382,
+            0.8633520565555262,
+            0.82538995836571,
+            0.763723061663493,
+            0.8680478860845628,
+            0.8830352795081384,
+            0.7868365094324933,
+            0.7634967839852411,
+            0.9267642975515977,
+            0.9118839046360873,
+            0.8040662931429814,
+            0.9379246734334592,
+            0.8505254702668578,
+            0.8702809981046158,
+            0.770949811342981,
+            0.8426252321395081
+          ],
+          "cross_eye": [
+            0.8600560897440401,
+            0.8969022690933988,
+            0.9086910049125922,
+            0.7735328008030297,
+            0.7760241560183003,
+            0.8108374475365491,
+            0.8454173907915793,
+            0.8858864342336437,
+            0.8521406144639274,
+            0.8851847298392964,
+            0.8322394851825691,
+            0.9273603448122348,
+            0.8376226231936375,
+            0.7401025467977773,
+            0.9345197652948475,
+            0.7911496610546727,
+            0.8098793445523729,
+            0.8318175247163111,
+            0.7441465858297436,
+            0.8775255844345857,
+            0.8744170940164675,
+            0.8177010190552099,
+            0.6820939118444448,
+            0.7781773629866953,
+            0.8868162825033872,
+            0.8558661288414846,
+            0.8078682572109873,
+            0.9260230921872756,
+            0.8045171415079857,
+            0.8614314668796847,
+            0.9096189719813402,
+            0.8485422113773862,
+            0.8696801361230242,
+            0.8301129072489825,
+            0.8509261524176985
+          ],
+          "matched_negative_mean_over_seeds": [
+            0.7744036682048926,
+            0.7116234388812137,
+            0.8135541736699269,
+            0.7545036027327406,
+            0.7490531956241665,
+            0.784043235332271,
+            0.7858456643025032,
+            0.7674135762188775,
+            0.7577302080069267,
+            0.8272682591441922,
+            0.7024178912804205,
+            0.8787603898281215,
+            0.8491639062466174,
+            0.7510786416786861,
+            0.5321294006327266,
+            0.642702912265684,
+            0.7357627177326111,
+            0.7788721153734144,
+            0.6860474362506027,
+            0.7961617994734125,
+            0.7975356342506291,
+            0.635570419869517,
+            0.6724529135715158,
+            0.7280459483713516,
+            0.8014944098739208,
+            0.7464694122017916,
+            0.7983763853196121,
+            0.7154191245869641,
+            0.8344198883709841,
+            0.7747845934185021,
+            0.836441641424401,
+            0.8297618061708858,
+            0.691179012408278,
+            0.6815225598673654,
+            0.7685557180409957
+          ]
+        },
+        "same_eye_patient_mean": 0.8447383788012498,
+        "same_eye_patient_bootstrap_95ci": [
+          0.8204760691423436,
+          0.8681956206742618
+        ],
+        "cross_eye_patient_mean": 0.8407093868424903,
+        "cross_eye_patient_bootstrap_95ci": [
+          0.8221384595668495,
+          0.8591022428861073
+        ],
+        "matched_negative_mean_over_seeds": 0.7540161628750491,
+        "matched_negative_node_bootstrap_interval_envelope": [
+          0.6936978733088236,
+          0.8070689661547439
+        ],
+        "rows": [
+          {
+            "seed": 20260922,
+            "n_patients": 35,
+            "same_eye_mean": 0.8447383788012498,
+            "cross_eye_mean": 0.8407093868424903,
+            "matched_negative_mean": 0.7542601592553186,
+            "matched_negative_node_bootstrap_95ci": [
+              0.7025327793010525,
+              0.8007582083064116
+            ],
+            "same_eye_minus_cross_eye": 0.00402899195875946,
+            "cross_eye_minus_matched_negative": 0.08644922758717166,
+            "same_eye_minus_cross_eye_node_bootstrap_95ci": [
+              -0.012931274786906016,
+              0.020176703590913912
+            ],
+            "cross_eye_minus_matched_negative_node_bootstrap_95ci": [
+              0.042713475050059235,
+              0.1320959057309722
+            ],
+            "mean_abs_right_eye_quality_difference": 0.08928571428571429
+          },
+          {
+            "seed": 20260923,
+            "n_patients": 35,
+            "same_eye_mean": 0.8447383788012498,
+            "cross_eye_mean": 0.8407093868424903,
+            "matched_negative_mean": 0.7605629531705814,
+            "matched_negative_node_bootstrap_95ci": [
+              0.7061645371093851,
+              0.8070689661547439
+            ],
+            "same_eye_minus_cross_eye": 0.00402899195875946,
+            "cross_eye_minus_matched_negative": 0.08014643367190888,
+            "same_eye_minus_cross_eye_node_bootstrap_95ci": [
+              -0.01251345318501219,
+              0.02103163984816406
+            ],
+            "cross_eye_minus_matched_negative_node_bootstrap_95ci": [
+              0.03394840074337471,
+              0.13276396280012667
+            ],
+            "mean_abs_right_eye_quality_difference": 0.0992857142857143
+          },
+          {
+            "seed": 20260924,
+            "n_patients": 35,
+            "same_eye_mean": 0.8447383788012498,
+            "cross_eye_mean": 0.8407093868424903,
+            "matched_negative_mean": 0.7459782010017983,
+            "matched_negative_node_bootstrap_95ci": [
+              0.6936978733088236,
+              0.7947152356567022
+            ],
+            "same_eye_minus_cross_eye": 0.00402899195875946,
+            "cross_eye_minus_matched_negative": 0.09473118584069196,
+            "same_eye_minus_cross_eye_node_bootstrap_95ci": [
+              -0.012913516624328708,
+              0.020019993696785126
+            ],
+            "cross_eye_minus_matched_negative_node_bootstrap_95ci": [
+              0.0479649310523417,
+              0.1451261261237094
+            ],
+            "mean_abs_right_eye_quality_difference": 0.0992857142857143
+          },
+          {
+            "seed": 20260925,
+            "n_patients": 35,
+            "same_eye_mean": 0.8447383788012498,
+            "cross_eye_mean": 0.8407093868424903,
+            "matched_negative_mean": 0.7536797260963158,
+            "matched_negative_node_bootstrap_95ci": [
+              0.7038231182532764,
+              0.7972721104745346
+            ],
+            "same_eye_minus_cross_eye": 0.00402899195875946,
+            "cross_eye_minus_matched_negative": 0.08702966074617446,
+            "same_eye_minus_cross_eye_node_bootstrap_95ci": [
+              -0.01303623871006517,
+              0.019998258964275886
+            ],
+            "cross_eye_minus_matched_negative_node_bootstrap_95ci": [
+              0.04542962989080385,
+              0.1344590192550155
+            ],
+            "mean_abs_right_eye_quality_difference": 0.08928571428571429
+          },
+          {
+            "seed": 20260926,
+            "n_patients": 35,
+            "same_eye_mean": 0.8447383788012498,
+            "cross_eye_mean": 0.8407093868424903,
+            "matched_negative_mean": 0.7555997748512314,
+            "matched_negative_node_bootstrap_95ci": [
+              0.7042989922945306,
+              0.7975891606876202
+            ],
+            "same_eye_minus_cross_eye": 0.00402899195875946,
+            "cross_eye_minus_matched_negative": 0.08510961199125888,
+            "same_eye_minus_cross_eye_node_bootstrap_95ci": [
+              -0.012341255188660449,
+              0.020649233700799702
+            ],
+            "cross_eye_minus_matched_negative_node_bootstrap_95ci": [
+              0.04261459816250246,
+              0.1317278605304773
+            ],
+            "mean_abs_right_eye_quality_difference": 0.09214285714285715
+          }
+        ],
+        "same_eye_minus_cross_eye_interval_envelope": [
+          -0.01303623871006517,
+          0.02103163984816406
+        ],
+        "cross_eye_minus_matched_negative_interval_envelope": [
+          0.03394840074337471,
+          0.1451261261237094
+        ]
+      },
+      "test": {
+        "split": "test",
+        "n_strict_four_view_patients_before_matching": 43,
+        "n_common_eligible_patients": 33,
+        "matching": "Exact ordered bilateral DR signature and exact right-eye quality-composite tier; anchor left-eye image is held fixed for positive and negative scores.",
+        "identity_free_patient_score_distributions": {
+          "same_eye": [
+            0.8006790750301687,
+            0.6862750783128404,
+            0.9578409681139726,
+            0.7886010619508473,
+            0.7568374322609087,
+            0.8502739194394213,
+            0.844548713208001,
+            0.8664402359580718,
+            0.8534278078776467,
+            0.9983984601041609,
+            0.712961805244348,
+            0.8018548548952746,
+            0.765148958127134,
+            0.7839638721671676,
+            0.9549740208463697,
+            0.8717562779861185,
+            0.8205075828339837,
+            0.8113551053604839,
+            0.9300085279274508,
+            0.7898459189247653,
+            0.8364015272391225,
+            0.8250220531691368,
+            0.902327378889485,
+            0.862078419906994,
+            0.7312567999149373,
+            0.8781713223213952,
+            0.7280981294130177,
+            0.9991406736977323,
+            0.7913608048371144,
+            0.7993160270811244,
+            0.8550485159502088,
+            0.8046634305495863,
+            0.8339195148785148
+          ],
+          "cross_eye": [
+            0.8597660638052136,
+            0.7870296593675189,
+            0.8750337652609327,
+            0.8550768829416182,
+            0.8071832376113395,
+            0.8675864447247535,
+            0.888660612942569,
+            0.8514601253902928,
+            0.8264007378103139,
+            0.9476978247451081,
+            0.7530563588160071,
+            0.8538805420359223,
+            0.7695842192034443,
+            0.7854564191961722,
+            0.8820773081562324,
+            0.884402433115209,
+            0.850936743650899,
+            0.6020705461995272,
+            0.8454353652741771,
+            0.8297243753241296,
+            0.8348299605199248,
+            0.8600148715395352,
+            0.8565031789771117,
+            0.8493600532919159,
+            0.7755703572413694,
+            0.8834939308089179,
+            0.8116632967245281,
+            0.9317603235943575,
+            0.8352160519330558,
+            0.8570123984283958,
+            0.8555120573484094,
+            0.8411981337588202,
+            0.8462060230622903
+          ],
+          "matched_negative_mean_over_seeds": [
+            0.8715223248647137,
+            0.7684443380762601,
+            0.8046812983470726,
+            0.7479193223837552,
+            0.783205524090192,
+            0.7577997700314222,
+            0.7289416035823023,
+            0.7638057048844634,
+            0.6146868669457412,
+            0.8442485450578362,
+            0.6755001472018971,
+            0.7245350496167202,
+            0.772412284816452,
+            0.7832026371469979,
+            0.8049719055889343,
+            0.8355650540000441,
+            0.8262505492030086,
+            0.6043785895644651,
+            0.7840912491900073,
+            0.7420300676208916,
+            0.7488911323942787,
+            0.8266701153517415,
+            0.8515303622013441,
+            0.7966903363044896,
+            0.6836090971320813,
+            0.80387456876715,
+            0.7498480638572026,
+            0.8404861120433136,
+            0.8657415854676305,
+            0.7399532858502105,
+            0.7758666896991283,
+            0.7582092414050757,
+            0.8007881715245719
+          ]
+        },
+        "same_eye_patient_mean": 0.8331061901338638,
+        "same_eye_patient_bootstrap_95ci": [
+          0.8082520017350137,
+          0.8591349628730658
+        ],
+        "cross_eye_patient_mean": 0.8382078879636368,
+        "cross_eye_patient_bootstrap_95ci": [
+          0.81631034112755,
+          0.8571139822879682
+        ],
+        "matched_negative_mean_over_seeds": 0.7721318664912544,
+        "matched_negative_node_bootstrap_interval_envelope": [
+          0.7206821545527111,
+          0.8230881710818202
+        ],
+        "rows": [
+          {
+            "seed": 20260922,
+            "n_patients": 33,
+            "same_eye_mean": 0.8331061901338638,
+            "cross_eye_mean": 0.8382078879636368,
+            "matched_negative_mean": 0.7762811423746228,
+            "matched_negative_node_bootstrap_95ci": [
+              0.726693803265547,
+              0.8230881710818202
+            ],
+            "same_eye_minus_cross_eye": -0.005101697829772945,
+            "cross_eye_minus_matched_negative": 0.06192674558901401,
+            "same_eye_minus_cross_eye_node_bootstrap_95ci": [
+              -0.024001900931649705,
+              0.016366895861443305
+            ],
+            "cross_eye_minus_matched_negative_node_bootstrap_95ci": [
+              0.020486481101972296,
+              0.10156900319570503
+            ],
+            "mean_abs_right_eye_quality_difference": 0.07272727272727274
+          },
+          {
+            "seed": 20260923,
+            "n_patients": 33,
+            "same_eye_mean": 0.8331061901338638,
+            "cross_eye_mean": 0.8382078879636368,
+            "matched_negative_mean": 0.7727263469005999,
+            "matched_negative_node_bootstrap_95ci": [
+              0.7218312131107623,
+              0.8147138795283367
+            ],
+            "same_eye_minus_cross_eye": -0.005101697829772945,
+            "cross_eye_minus_matched_negative": 0.06548154106303683,
+            "same_eye_minus_cross_eye_node_bootstrap_95ci": [
+              -0.02379182808751647,
+              0.016076843553113736
+            ],
+            "cross_eye_minus_matched_negative_node_bootstrap_95ci": [
+              0.026283984626655064,
+              0.11138842764865323
+            ],
+            "mean_abs_right_eye_quality_difference": 0.07878787878787881
+          },
+          {
+            "seed": 20260924,
+            "n_patients": 33,
+            "same_eye_mean": 0.8331061901338638,
+            "cross_eye_mean": 0.8382078879636368,
+            "matched_negative_mean": 0.7692640211997425,
+            "matched_negative_node_bootstrap_95ci": [
+              0.722690968608311,
+              0.8104926898827095
+            ],
+            "same_eye_minus_cross_eye": -0.005101697829772945,
+            "cross_eye_minus_matched_negative": 0.0689438667638943,
+            "same_eye_minus_cross_eye_node_bootstrap_95ci": [
+              -0.02450676226589338,
+              0.015194590719119426
+            ],
+            "cross_eye_minus_matched_negative_node_bootstrap_95ci": [
+              0.03245395273148117,
+              0.10656007379066958
+            ],
+            "mean_abs_right_eye_quality_difference": 0.07424242424242425
+          },
+          {
+            "seed": 20260925,
+            "n_patients": 33,
+            "same_eye_mean": 0.8331061901338638,
+            "cross_eye_mean": 0.8382078879636368,
+            "matched_negative_mean": 0.7699979545347985,
+            "matched_negative_node_bootstrap_95ci": [
+              0.7214077710151972,
+              0.8114071347188782
+            ],
+            "same_eye_minus_cross_eye": -0.005101697829772945,
+            "cross_eye_minus_matched_negative": 0.0682099334288383,
+            "same_eye_minus_cross_eye_node_bootstrap_95ci": [
+              -0.02429154322149035,
+              0.016449932200838253
+            ],
+            "cross_eye_minus_matched_negative_node_bootstrap_95ci": [
+              0.028362943713419696,
+              0.11016521352553946
+            ],
+            "mean_abs_right_eye_quality_difference": 0.07121212121212123
+          },
+          {
+            "seed": 20260926,
+            "n_patients": 33,
+            "same_eye_mean": 0.8331061901338638,
+            "cross_eye_mean": 0.8382078879636368,
+            "matched_negative_mean": 0.7723898674465085,
+            "matched_negative_node_bootstrap_95ci": [
+              0.7206821545527111,
+              0.8138051688732649
+            ],
+            "same_eye_minus_cross_eye": -0.005101697829772945,
+            "cross_eye_minus_matched_negative": 0.06581802051712826,
+            "same_eye_minus_cross_eye_node_bootstrap_95ci": [
+              -0.023118293358684757,
+              0.016018243820179332
+            ],
+            "cross_eye_minus_matched_negative_node_bootstrap_95ci": [
+              0.0264897316236786,
+              0.10859538465346007
+            ],
+            "mean_abs_right_eye_quality_difference": 0.0772727272727273
+          }
+        ],
+        "same_eye_minus_cross_eye_interval_envelope": [
+          -0.02450676226589338,
+          0.016449932200838253
+        ],
+        "cross_eye_minus_matched_negative_interval_envelope": [
+          0.020486481101972296,
+          0.11138842764865323
+        ]
+      }
+    }
+  },
+  "papila": {
+    "manifest": "LOCAL_INPUT_NOT_INCLUDED",
+    "features": "LOCAL_INPUT_NOT_INCLUDED",
+    "n_complete_bilateral_patients": 244,
+    "conditions": [
+      {
+        "condition": "unmatched_random",
+        "n_patients": 244,
+        "auroc_mean": 0.8668872614888471,
+        "auroc_seed_sd": 0.004123478525136213,
+        "node_bootstrap_interval_envelope": [
+          0.8205443914959634,
+          0.905585451781455
+        ],
+        "rows": [
+          {
+            "seed": 20260921,
+            "n_patients": 244,
+            "pair_identity_auroc": 0.8708344531040044,
+            "node_bootstrap_95ci": [
+              0.8330324176635652,
+              0.9049007897461928
+            ]
+          },
+          {
+            "seed": 20260922,
+            "n_patients": 244,
+            "pair_identity_auroc": 0.8689868314969096,
+            "node_bootstrap_95ci": [
+              0.8275053663382433,
+              0.905585451781455
+            ]
+          },
+          {
+            "seed": 20260923,
+            "n_patients": 244,
+            "pair_identity_auroc": 0.8614115829078204,
+            "node_bootstrap_95ci": [
+              0.822206913049758,
+              0.9003037374719851
+            ]
+          },
+          {
+            "seed": 20260924,
+            "n_patients": 244,
+            "pair_identity_auroc": 0.8695915076592313,
+            "node_bootstrap_95ci": [
+              0.8308894443886464,
+              0.9054684775026159
+            ]
+          },
+          {
+            "seed": 20260925,
+            "n_patients": 244,
+            "pair_identity_auroc": 0.8636119322762699,
+            "node_bootstrap_95ci": [
+              0.8205443914959634,
+              0.9011666418442824
+            ]
+          }
+        ]
+      },
+      {
+        "condition": "bilateral_diagnosis_signature_matched",
+        "n_patients": 244,
+        "auroc_mean": 0.8585292932007527,
+        "auroc_seed_sd": 0.009521298636705632,
+        "node_bootstrap_interval_envelope": [
+          0.8038798457087754,
+          0.9066356561881567
+        ],
+        "rows": [
+          {
+            "seed": 20260921,
+            "n_patients": 244,
+            "pair_identity_auroc": 0.8578507121741468,
+            "node_bootstrap_95ci": [
+              0.8177641838206688,
+              0.896180127573031
+            ]
+          },
+          {
+            "seed": 20260922,
+            "n_patients": 244,
+            "pair_identity_auroc": 0.852207067992475,
+            "node_bootstrap_95ci": [
+              0.8101385595529452,
+              0.8894749774536482
+            ]
+          },
+          {
+            "seed": 20260923,
+            "n_patients": 244,
+            "pair_identity_auroc": 0.8660474334856222,
+            "node_bootstrap_95ci": [
+              0.8276489389309987,
+              0.9035570965066354
+            ]
+          },
+          {
+            "seed": 20260924,
+            "n_patients": 244,
+            "pair_identity_auroc": 0.8467481859715129,
+            "node_bootstrap_95ci": [
+              0.8038798457087754,
+              0.88720946368009
+            ]
+          },
+          {
+            "seed": 20260925,
+            "n_patients": 244,
+            "pair_identity_auroc": 0.8697930663800055,
+            "node_bootstrap_95ci": [
+              0.8286845547656887,
+              0.9066356561881567
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "hcbfd": {
+    "source": "LOCAL_INPUT_NOT_INCLUDED",
+    "selected_variant": "hierarchical_no_adversary",
+    "noncollapse_floor": 0.1,
+    "archived_validation_branch_mean_std_by_variant": {
+      "hierarchical_adversary": {
+        "h_mean_feature_std": 0.5045003950595855,
+        "d_mean_feature_std": 0.644516396522522,
+        "e_mean_feature_std": 0.20280327200889586
+      },
+      "hierarchical_no_adversary": {
+        "h_mean_feature_std": 0.41731637716293335,
+        "d_mean_feature_std": 0.6477768898010254,
+        "e_mean_feature_std": 0.2041623890399933
+      },
+      "shared_only": {
+        "h_mean_feature_std": 0.6749387383460999,
+        "d_mean_feature_std": 0.27412593364715576,
+        "e_mean_feature_std": 0.2823495984077454
+      }
+    },
+    "all_archived_variants_pass_floor_posthoc": true,
+    "metrics": [
+      {
+        "comparison": "DeepDRiD validation (patient-grade × patient-quality tier)",
+        "n_patients": 42,
+        "raw_frozen": {
+          "n_seeds": 5,
+          "mean": 0.842517006802721,
+          "sample_sd_ddof_1": 0.013230617279674721,
+          "population_sd_ddof_0_archived": 0.01183382384865441
+        },
+        "hcbfd_selected": {
+          "n_seeds": 5,
+          "mean": 0.8816326530612244,
+          "sample_sd_ddof_1": 0.019458570330237367,
+          "population_sd_ddof_0_archived": 0.01740427440134851
+        },
+        "raw_seed_aurocs": [
+          0.8486394557823129,
+          0.850907029478458,
+          0.8378684807256236,
+          0.8537414965986395,
+          0.8214285714285713
+        ],
+        "hcbfd_seed_aurocs": [
+          0.8713151927437641,
+          0.9030612244897959,
+          0.8956916099773242,
+          0.8837868480725624,
+          0.8543083900226758
+        ]
+      },
+      {
+        "comparison": "DeepDRiD held-out test (patient-grade × patient-quality tier)",
+        "n_patients": 41,
+        "raw_frozen": {
+          "n_seeds": 5,
+          "mean": 0.7841760856632958,
+          "sample_sd_ddof_1": 0.011818594980184833,
+          "population_sd_ddof_0_archived": 0.010570872709692425
+        },
+        "hcbfd_selected": {
+          "n_seeds": 5,
+          "mean": 0.8579417013682333,
+          "sample_sd_ddof_1": 0.03637656059278614,
+          "population_sd_ddof_0_archived": 0.03253618490924394
+        },
+        "raw_seed_aurocs": [
+          0.7745389649018442,
+          0.785841760856633,
+          0.8030933967876265,
+          0.783462224866151,
+          0.7739440809042237
+        ],
+        "hcbfd_seed_aurocs": [
+          0.8572278405710886,
+          0.9006543723973826,
+          0.8875669244497323,
+          0.8185603807257585,
+          0.825698988697204
+        ]
+      },
+      {
+        "comparison": "CFP–OCT development stress set, patient-max DME",
+        "n_patients": 137,
+        "raw_frozen": {
+          "n_seeds": 5,
+          "mean": 0.9014971495551176,
+          "sample_sd_ddof_1": 0.005388251469994445,
+          "population_sd_ddof_0_archived": 0.0048193986267083
+        },
+        "hcbfd_selected": {
+          "n_seeds": 5,
+          "mean": 0.8485481378869413,
+          "sample_sd_ddof_1": 0.019283022969869144,
+          "population_sd_ddof_0_archived": 0.017247260068926917
+        },
+        "raw_seed_aurocs": [
+          0.8999413927220415,
+          0.9030315946507539,
+          0.8973839842293143,
+          0.8970110288241249,
+          0.9101177473493527
+        ],
+        "hcbfd_seed_aurocs": [
+          0.8339815653471149,
+          0.8782566998774575,
+          0.8542277159145399,
+          0.8296659385156375,
+          0.8466087697799562
+        ]
+      },
+      {
+        "comparison": "CFP–OCT development stress set, legacy eye-mode DME",
+        "n_patients": 137,
+        "raw_frozen": {
+          "n_seeds": 5,
+          "mean": 0.9108423464222921,
+          "sample_sd_ddof_1": 0.005424899520923445,
+          "population_sd_ddof_0_archived": 0.004852177639956347
+        },
+        "hcbfd_selected": {
+          "n_seeds": 5,
+          "mean": 0.8700836485694496,
+          "sample_sd_ddof_1": 0.022590334875501078,
+          "population_sd_ddof_0_archived": 0.020205409766441865
+        },
+        "raw_seed_aurocs": [
+          0.9041504608663221,
+          0.9175235761095424,
+          0.9110767755341255,
+          0.906974266077042,
+          0.9144866535244286
+        ],
+        "hcbfd_seed_aurocs": [
+          0.8577441525920402,
+          0.8913101390590867,
+          0.8871010709148064,
+          0.8369652085886301,
+          0.8772976716926847
+        ]
+      }
+    ],
+    "historical_note": "The archived v1 selector did not mechanically enforce this branch-standard-deviation floor. The revision selector now does; retrospective application to all archived validation seeds shows every candidate passes and the winner is unchanged."
+  }
+}

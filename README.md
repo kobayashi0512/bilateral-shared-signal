@@ -1,6 +1,6 @@
-# Bilateral Fundus Correspondence
+# Bilateral Cross-Eye Correspondence
 
-This repository accompanies **“Conditional Bilateral Fundus Correspondence Under Disease and Quality Matching: A Multi-View Evaluation Study.”** It preserves the analysis code, frozen protocols, figure sources, identity-free figure inputs, aggregate results, and manuscript files needed to understand and reproduce the reported analyses when the source datasets are obtained under their own terms.
+This repository accompanies **“Evaluating Same-Patient Matching Between Left- and Right-Eye Fundus Images Under Disease and Image-Quality Controls.”** The current manuscript file is version 1.8. The paper's analyses and results are unchanged from version 1.7; this revision aligns dataset, ethics-source, and repository-availability statements with the three cohorts actually analyzed. The repository preserves analysis code, frozen protocols, figure sources, identity-free figure inputs, aggregate results, and the manuscript, subject to each source dataset's terms.
 
 **Repository:** <https://github.com/kobayashi0512/bilateral-shared-signal>
 
@@ -12,10 +12,11 @@ The work is an evaluation study, not a patient-identification system, a disease-
 
 ## Current manuscript and figures
 
-- [Manuscript DOCX](manuscript/bilateral_correspondence_v10_github_release.docx)
-- [Manuscript PDF](manuscript/bilateral_correspondence_v10_github_release.pdf)
+- [Manuscript DOCX — version 1.8](manuscript/bilateral_1.8.docx)
+- [Manuscript PDF — version 1.8](manuscript/bilateral_1.8.pdf)
 - [Figure 1: study framework](figures/figure1_framework/package_v4/07_svg_export/figure1_framework.svg) and [editable PowerPoint](figures/figure1_framework/package_v4/06_editable_pptx/figure1_framework.pptx)
-- [Figures 2–4 and captions](figures/)
+- [Figures 2–4: editable SVG/PDF sources and captions](figures/revision_v11/)
+- [Revision v11 results and patient-node audit](results/revision_v11/REVISION_V11_CONDITIONAL_AUDIT.md)
 
 Figure 1 includes four unmodified DeepDRiD examples (two views per eye) and an OD/OS PAPILA example pair. Figure 4 contains a separate illustrative PAPILA pair. The source image licenses and attribution are recorded in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md); no CFP–OCT source photographs are redistributed because the source repository did not state an image-reuse license.
 
@@ -33,7 +34,7 @@ See [project decisions and claim boundaries](docs/PROJECT_STATUS_AND_DECISIONS.m
 
 - `code/` — dataset normalization, manifest/split checks, frozen feature extraction, conditional controls, uncertainty analysis, and frozen PAPILA probe.
 - `protocols/` — analysis and freeze protocols. `PHASE2_PUBLIC_DATA_PROTOCOL.md` is retained as a historical planning record; see the current roles and decisions before interpreting it.
-- `results/` — concise result reports and identity-free plotting inputs. Raw images, raw archives, patient manifests, model weights, and feature caches are not included.
+- `results/` — concise result reports and identity-free aggregate plotting inputs. Raw images, raw archives, patient manifests, model weights, and feature caches are not included.
 - `figures/` — paper figures, figure-generation scripts, source image provenance, captions, and the editable Figure 1 package.
 - `manuscript/` — current DOCX/PDF release.
 - `docs/` and `environment/` — data-access/licensing, reproduction guidance, and runtime notes.
@@ -45,7 +46,7 @@ See [project decisions and claim boundaries](docs/PROJECT_STATUS_AND_DECISIONS.m
 3. Follow the frozen protocol for the dataset role. Do not use PAPILA to tune a model or threshold; do not use CFP–OCT to select a new H-CBFD variant.
 4. Run the corresponding analysis script and compare with the concise report in `results/`.
 
-The exact local data were not bundled, so the commands require user-supplied dataset paths and are not a one-click reproduction from a clean checkout. Package versions and known constraints are documented in [environment/README.md](environment/README.md). No full dependency lockfile is claimed.
+The exact local data were not bundled, so the commands require user-supplied dataset paths and are not a one-click reproduction from a clean checkout. The revision v11 audit report records the assignment seeds and patient-node uncertainty procedure; the PAPILA source photographs used in Figure 4 are embedded in the released figure, while the generator expects authorized local image files at the paths noted in its manifest. Package versions and known constraints are documented in [environment/README.md](environment/README.md). No full dependency lockfile is claimed.
 
 ## Citation
 

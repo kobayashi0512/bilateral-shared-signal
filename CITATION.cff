@@ -1,6 +1,6 @@
 cff-version: 1.2.0
-message: "If you use this research package, please cite the accompanying manuscript and the original dataset papers."
-title: "Conditional Bilateral Fundus Correspondence Under Disease and Quality Matching"
+message: "If you use this research package, please cite the manuscript 'Evaluating Same-Patient Matching Between Left- and Right-Eye Fundus Images Under Disease and Image-Quality Controls' and the original dataset papers."
+title: "Bilateral shared-signal research artifacts"
 type: software
 authors:
   - family-names: Deng

@@ -17,9 +17,10 @@
 | Frozen ImageNet ResNet-50 feature extraction | `../code/extract_deepdrid_resnet50_features.py`, `../code/extract_manifest_resnet50_features.py` | `../protocols/REVISION_V6_PROTOCOL.md`; features remain local and are not released. |
 | Conditional controls / paired uncertainty | `../code/conditional_shared_signal_controls.py`, `../code/bootstrap_shared_signal_full.py`, `../code/revision_v6_uncertainty_audit.py` | Disease/quality matching and paired-patient uncertainty audits. |
 | H-CBFD feature screen | `../code/train_hcbfd_feature_screen.py` | Validation-only variant selection; CFP–OCT remains a stress readout. |
+| Eye-level conditional controls and patient-node uncertainty audit | `../code/revision_v11_conditional_audit.py` | Reads local feature arrays and row-aligned manifests; the public report and aggregate JSON are in `../results/revision_v11/`. Patient-level inputs remain local. |
 | PAPILA official structure and frozen probe | `../code/normalize_papila_official.py`, `../code/papila_frozen_external_probe.py` | `../protocols/PAPILA_EXTERNAL_FREEZE_PROTOCOL_V1.md`; PAPILA is not a tuning set. |
 | Figure 1 | `../figures/figure1_framework/build_figure1_framework_v4.py` | Rebuild from the image assets documented in that directory; deliverable includes SVG and editable PPTX. |
-| Figures 2–4 | `../figures/build_main_figures_base.py`, `../figures/build_evidence_figures_public.py` | Use identity-free figure inputs in `../results/figure_inputs_v1.json`; read the figure captions and reports before interpreting panels. |
+| Figures 2–4 | `../figures/revision_v11/build_revision_v11_figures.py` | Uses the revision v11 aggregate audit and authorized local PAPILA example images for Figure 4; editable SVG/PDF outputs and captions are in `../figures/revision_v11/`. |
 
 ## Reproduction limits
 
