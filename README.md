@@ -1,6 +1,6 @@
 # Bilateral Cross-Eye Correspondence
 
-This repository accompanies **“Evaluating Same-Patient Matching Between Left- and Right-Eye Fundus Images Under Disease and Image-Quality Controls.”** The current manuscript file is version 1.8. The paper's analyses and results are unchanged from version 1.7; this revision aligns dataset, ethics-source, and repository-availability statements with the three cohorts actually analyzed. The repository preserves analysis code, frozen protocols, figure sources, identity-free figure inputs, aggregate results, and the manuscript, subject to each source dataset's terms.
+This repository accompanies **“Evaluating Same-Patient Matching Between Left- and Right-Eye Fundus Images Under Disease and Image-Quality Controls.”** The current manuscript file is version 1.9. The analyses and results are unchanged from version 1.8. The repository preserves analysis code, frozen protocols, figure sources, identity-free figure inputs, aggregate results, and the manuscript, subject to each source dataset's terms.
 
 **Repository:** <https://github.com/kobayashi0512/bilateral-shared-signal>
 
@@ -12,8 +12,8 @@ The work is an evaluation study, not a patient-identification system, a disease-
 
 ## Current manuscript and figures
 
-- [Manuscript DOCX — version 1.8](manuscript/bilateral_1.8.docx)
-- [Manuscript PDF — version 1.8](manuscript/bilateral_1.8.pdf)
+- [Manuscript DOCX — version 1.9](manuscript/bilateral_1.9.docx)
+- [Manuscript PDF — version 1.9](manuscript/bilateral_1.9.pdf)
 - [Figure 1: study framework](figures/figure1_framework/package_v4/07_svg_export/figure1_framework.svg) and [editable PowerPoint](figures/figure1_framework/package_v4/06_editable_pptx/figure1_framework.pptx)
 - [Figures 2–4: editable SVG/PDF sources and captions](figures/revision_v11/)
 - [Revision v11 results and patient-node audit](results/revision_v11/REVISION_V11_CONDITIONAL_AUDIT.md)
